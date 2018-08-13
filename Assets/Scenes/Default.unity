@@ -202,9 +202,11 @@ GameObject:
   - component: {fileID: 1187094954}
   - component: {fileID: 1187094953}
   - component: {fileID: 1187094955}
+  - component: {fileID: 1187094956}
+  - component: {fileID: 1187094957}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Collision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -285,6 +287,33 @@ MonoBehaviour:
   moveBoundary: 29
   shotSpeed: 0.5
   shooting: 1
+--- !u!114 &1187094956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1187094952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348c4a555a60785418aafde68dfd95d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1376111012622926, guid: 0cce5d201779f0a48a499dbc90619aae, type: 2}
+  canSpawn: 1
+  spawnCounter: 1
+  maxX: 28
+  startY: 20
+--- !u!114 &1187094957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1187094952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7e8633d84427843a2b89879d178787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1715566526
 Prefab:
   m_ObjectHideFlags: 0

@@ -23,10 +23,10 @@ GameObject:
   - component: {fileID: 114692613759208080}
   - component: {fileID: 61104480884446058}
   - component: {fileID: 50983934368796398}
-  - component: {fileID: 114053864628189800}
+  - component: {fileID: 114473381873046598}
   m_Layer: 0
   m_Name: PrefabProjectile
-  m_TagString: Collision
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,7 +89,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114053864628189800
+--- !u!114 &114473381873046598
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

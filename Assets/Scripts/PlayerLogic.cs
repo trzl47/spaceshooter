@@ -5,12 +5,13 @@ using UnityEngine;
 public class PlayerLogic : MonoBehaviour {
 
 	public GameObject projectile;
-	public float xRotation = 1.0f;
-	public float yRotation = 1.0f;
-	public float zRotation = 1.0f;
-	public float playerSpeed = 1.0f;
-	public float moveBoundary = 29.0f;
-	public float shotSpeed = 0.8f;
+	float xRotation = 1.0f;
+	float yRotation = 1.0f;
+	float zRotation = 1.0f;
+	float playerSpeed = 1.0f;
+	float moveBoundary = 29.0f;
+	float shotSpeed = 0.8f;
+	float projectileCollisionOffset = 5.0f;
 	public bool shooting = true;
 
 	// Use this for initialization
@@ -50,10 +51,16 @@ public class PlayerLogic : MonoBehaviour {
 	}
 
 	void spawnProjectile() {
-		Instantiate(projectile, transform.position, Quaternion.identity);
+		Instantiate(projectile, new Vector3(transform.position.x, transform.position.y + projectileCollisionOffset, 0), Quaternion.identity);
 	}
 
 	void rotateTheTransform() {
 			transform.Rotate(xRotation,yRotation,zRotation);
+	}
+
+	void onCollisionEnter2D(Collision2D tempCollision) {
+		if (tempCollision.gameObject.tag == "Collision") {
+			Debug.Log("Collision");
+		}
 	}
 }

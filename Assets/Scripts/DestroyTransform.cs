@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DestroyTransform : MonoBehaviour {
 
@@ -15,6 +16,11 @@ public class DestroyTransform : MonoBehaviour {
 
 		if (transformCollision.gameObject.tag == "Projectile") {
 			Destroy (transformCollision.gameObject);
+		}
+
+		if (transformCollision.gameObject.tag == "Player") {
+			Destroy (transformCollision.gameObject);
+			SceneManager.LoadScene("Default");
 		}
 	}
 

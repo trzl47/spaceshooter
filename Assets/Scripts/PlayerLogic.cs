@@ -58,9 +58,4 @@ public class PlayerLogic : MonoBehaviour {
 			transform.Rotate(xRotation,yRotation,zRotation);
 	}
 
-	void onCollisionEnter2D(Collision2D tempCollision) {
-		if (tempCollision.gameObject.tag == "Collision") {
-			Debug.Log("Collision");
-		}
-	}
 }
